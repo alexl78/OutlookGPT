@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="taskpane.js"></script>
+    <title>OutlookGPT Email Assistant</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <h2>ChatGPT Query</h2>
+            <textarea id="query-input" rows="10" placeholder="Enter your query here..."></textarea>
+            <div class="modal-footer">
+                <button id="cancel-btn">Cancel</button>
+                <button id="ask-btn" disabled>Ask</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- API and Model settings -->
+    <div class="settings">
+        <h2>API Settings</h2>
+        <label for="api-key-input">OpenAI API Key:</label>
+        <input type="text" id="api-key-input" placeholder="Enter your API key"/>
+        <button id="save-api-key-btn">Save API Key</button>
+
+        <h2>Model Settings</h2>
+        <label for="model-select">Select ChatGPT Model:</label>
+        <select id="model-select">
+            <option value="GPT-4o">GPT-4o</option>
+            <option value="GPT-4o mini">GPT-4o mini</option>
+            <option value="GPT-4">GPT-4</option>
+            <option value="o1-preview">o1-preview</option>
+            <option value="o1-mini">o1-mini</option>
+        </select>
+
+        <label for="custom-model-input">Or enter custom model:</label>
+        <input type="text" id="custom-model-input" placeholder="Enter custom model (optional)"/>
+
+        <button id="save-model-btn">Save Model</button>
+    </div>
+</body>
+</html>

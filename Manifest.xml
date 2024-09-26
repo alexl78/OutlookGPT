@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+    xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverride/1.0" 
+    xsi:type="MailApp">
+  
+  <!-- Your generated GUID -->
+  <Id>90c2fa0e-639f-4a82-9c45-f51ec4f76f0a</Id>
+  
+  <Version>1.0.0.0</Version>
+  <ProviderName>Oleksiy Lukyanchykov</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName>OutlookGPT</DisplayName>
+  <Description>Generate email replies using ChatGPT.</Description>
+  
+  <!-- Links to resources hosted on GitHub Pages -->
+  <IconUrl DefaultValue="https://alexl78.github.io/OutlookGPT/icon.png"/>
+  <SupportUrl DefaultValue="https://alexl78.github.io/OutlookGPT/help"/>
+  
+  <!-- Outlook-specific settings -->
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="Mailbox"/>
+    </Sets>
+  </Requirements>
+
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://alexl78.github.io/OutlookGPT/taskpane.html"/>
+        <RequestedHeight>400</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <Permissions>ReadWriteItem</Permissions>
+  
+  <!-- Custom function triggered by a hotkey -->
+  <Action>
+    <!-- Hotkey set to Option+Command+G -->
+    <ExecuteFunctionOnHotKey FunctionName="launchGPTModal" HotKey="Option+Command+G"/>
+  </Action>
+</OfficeApp>
